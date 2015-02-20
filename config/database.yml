@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: groupize_development
+
+test:
+  <<: *default
+  database: groupize_test
+
+production:
+  <<: *default
+  database: groupize_production
+  username: groupize
+  password: <%= ENV['GROUPIZE_DATABASE_PASSWORD'] %>
