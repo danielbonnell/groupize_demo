@@ -1,0 +1,23 @@
+<%= form_for(@play) do |f| %>
+  <div class="row collapse">
+    <div class="small-6 small-offset-3 large-4 large-offset-4 columns">
+      <h3>Add New Play</h3>
+    </div>
+  </div>
+
+  <div class="row collapse">
+    <div class="small-12 large-8 large-offset-2 columns">
+      <h5>Title</h5>
+      <%= f.text_field :title %>
+
+      <h5>XML (Paste)</h5>
+      <%= f.text_area :xml %>
+    </div>
+  </div>
+
+  <div class="row collapse">
+    <div class="small-4 small-offset-4 large-2 large-offset-5 columns">
+      <%= f.submit "Add", class: "tiny round button" %>
+    </div>
+  </div>
+<% end %>
