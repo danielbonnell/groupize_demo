@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Groupize</title>
-  <%= stylesheet_link_tag 'application' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "Groupize" %></title>
 
-  <%= javascript_tag do %>
-    $(function(){
-      $("#myTable").tablesorter();
-    });
-  <% end %>
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+    
+    <%= javascript_tag do %>
+      $(function(){
+        $("#myTable").tablesorter();
+      });
+    <% end %>
+  </body>
 </html>
