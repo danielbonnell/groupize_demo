@@ -1,4 +1,6 @@
 class Play < ActiveRecord::Base
+  paginates_per 10
+  max_paginates_per 50
   validates :title, presence: true
   validates :xml, presence: true
   validate :valid_xml

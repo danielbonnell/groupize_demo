@@ -1,6 +1,6 @@
 class PlaysController < ApplicationController
   def index
-    @plays = Play.all.order("title ASC")
+    @plays = Play.all.order("title ASC").page params[:page]
   end
 
   def new

@@ -20,3 +20,19 @@
     <% end %>
   </tbody>
 </table>
+
+<div id="pager" class="pager">
+  <form>
+    <%= image_tag('jquery-tablesorter/addons/pager/icons/first.png', class: 'first') %>
+    <%= image_tag('jquery-tablesorter/addons/pager/icons/prev.png', class: 'prev') %>
+    <span class="pagedisplay"></span> <!-- this can be any element, including an input -->
+    <%= image_tag('jquery-tablesorter/addons/pager/icons/next.png', class: 'next') %>
+    <%= image_tag('jquery-tablesorter/addons/pager/icons/last.png', class: 'last') %>
+    <select class="pagesize">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="40">40</option>
+    </select>
+  </form>
+</div>

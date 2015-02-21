@@ -3,4 +3,5 @@
   <% @plays.all.each do |play| %>
     <li><%= link_to play.title, play_path(play.id) %></li>
   <% end %>
+  <%= paginate @plays %>
 </ul>
