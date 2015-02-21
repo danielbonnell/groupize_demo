@@ -15,7 +15,7 @@ class PlaysController < ApplicationController
       if @play.save
         format.html { redirect_to play_path(@play), notice: "Success" }
       else
-        format.html { redirect_to play_path(@play), notice: "Failed" }
+        format.html { redirect_to new_play_path, notice: "Failed" }
       end
     end
   end
@@ -29,7 +29,7 @@ class PlaysController < ApplicationController
   end
 
   def show
-    @play = Play.find(params[:id])
+    @play = Play.find(params[:id]).analyze
   end
 
   private

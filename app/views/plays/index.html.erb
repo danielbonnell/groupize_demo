@@ -1,6 +1,6 @@
 <h1>List of Plays</h1>
 <ul>
-  <% Play.all.each do %>
-    <li><%= link_to Play.title, play_path(Play.id) %></li>
+  <% @plays.all.each do |play| %>
+    <li><%= link_to play.title, play_path(play.id) %></li>
   <% end %>
 </ul>
