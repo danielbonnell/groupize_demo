@@ -47,3 +47,4 @@ end
 gem 'jquery-tablesorter'
 gem 'foundation-rails'
 gem 'nokogiri'
+gem 'kaminari'
