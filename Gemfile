@@ -48,3 +48,7 @@ gem 'jquery-tablesorter'
 gem 'foundation-rails'
 gem 'nokogiri'
 gem 'kaminari'
+
+group :production do
+  gem 'rails_12factor'
+end
